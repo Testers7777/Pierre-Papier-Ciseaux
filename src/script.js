@@ -19,13 +19,14 @@ function randomText() {
   document.querySelectorAll('.index1').forEach(element => element.addEventListener('click', () => {
     if (element.className != 'restart') {
     document.querySelector('.restart').disabled = false
+    document.querySelector('.restart').style.color = 'var(--button-text-color)'
     document.querySelector('.restart').style.backgroundColor = 'var(--danger)'
     document.querySelector('.restart').style.cursor = 'pointer'
     const choice2 = randomText();
     write(res(element.id, choice2) + ', ' + element.id + ' contre ' + choice2)
         document.querySelectorAll('.index1').forEach(element => element.disabled = true)
         document.querySelectorAll('.index1').forEach(element => element.style.backgroundColor = 'var(--primary-disabled)',
-    document.querySelectorAll('.index1').forEach(element => element.style.color = '#8f9099'),
+    document.querySelectorAll('.index1').forEach(element => element.style.color = 'var(--text-opacity)'),
 document.querySelectorAll('.index1').forEach(element => element.style.cursor = 'not-allowed'))
     }
 }))
@@ -33,6 +34,7 @@ document.querySelectorAll('.index1').forEach(element => element.style.cursor = '
 document.querySelector('.restart').addEventListener('click', () => {
     document.querySelector('.restart').disabled = true
     document.querySelector('.restart').style.backgroundColor = 'var(--danger-disabled)'
+    document.querySelector('.restart').style.color = 'var(--text-opacity)'
     document.querySelector('.restart').style.cursor = 'not-allowed'
     write('En attente du joueur...')
         document.querySelectorAll('.index1').forEach(element => element.disabled = false)
