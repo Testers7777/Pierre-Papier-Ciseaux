@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
+:root {
+    --danger: #da373c;
+    --danger-hover: #a12828;
+    --danger-disabled: #85353a;
+    --primary: #5865f2;
+    --primary-hover: #4752c5;
+    --primary-disabled: #434a93;
+    --background: #323338;
+    --background-div: #2c2d31;
+    --every-text-color: #d4d4d3;
+    --button-text-color: #e4eeff;
+}
+* {
+    color: var(--every-text-color);
+}
+button {
+    background-color: var(--primary);
+    height: 34px;
+    width: 73px;
+    border: none;
+    color: var(--button-text-color);
+    border-radius: 3px;
+    font-weight: 600;
+    transition: 0.4s;
+}
+.index1:hover {
+    background-color: var(--primary-hover);
+    cursor: pointer;
+    transition: 0.3s;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+.index1 + .index1 {
+    margin-left: 3px;
+    margin-top: 10px;
+}
+body {
+    background-color: var(--background);
+}
+div {
+    display: flex;
+    background-color: var(--background-div);
+    height: 50px;
+    width: 215px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border-left: var(--primary) solid 4px;
+}
+div + .index1 {
+    margin-top: 8px;
+}
+.restart {
+    background-color: var(--danger-disabled);
+    color: var(--button-text-color);
+    width: 110px;
+    margin-top: 8px;
+    cursor: not-allowed;
+}
+.restart:hover {
+    background-color: var(--danger-hover);
+}
